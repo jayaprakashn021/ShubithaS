@@ -18,7 +18,7 @@ const metrics = {
   navigation: [
     { name: 'Home', href: '#' },
     { name: 'Services', href: '#services' },
-    { name: 'Calculator', href: '#calculator' },
+    // { name: 'Calculator', href: '#calculator' },
     { name: 'Projects', href: '#projects' },
   ],
   hero: {
