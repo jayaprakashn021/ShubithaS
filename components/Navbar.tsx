@@ -19,8 +19,8 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 border-b ${isScrolled
-          ? 'bg-white/80 backdrop-blur-xl border-slate-200/50 py-3 shadow-sm'
-          : 'bg-transparent border-transparent py-6'
+        ? 'bg-white/80 backdrop-blur-xl border-slate-200/50 py-3 shadow-sm'
+        : 'bg-transparent border-transparent py-6'
         }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -34,8 +34,12 @@ const Navbar: React.FC = () => {
             <span className={`font-display font-bold text-xl leading-none tracking-tight ${isScrolled ? 'text-slate-900' : 'text-slate-900 md:text-white'}`}>
               {metrics.company.name}
             </span>
-            <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${isScrolled ? 'text-brand-600' : 'text-brand-400 md:text-brand-300'}`}>
-              {metrics.company.suffix}
+            <span className="text-[10px] font-bold tracking-[0.2em] uppercase">
+              {metrics.company.suffix.split(' ').map((word, index, arr) => (
+                <span key={index} className={word.toLowerCase() === 'energy' ? 'text-yellow-500' : (isScrolled ? 'text-brand-600' : 'text-brand-400 md:text-brand-300')}>
+                  {word}{index < arr.length - 1 ? ' ' : ''}
+                </span>
+              ))}
             </span>
           </div>
         </div>
@@ -48,8 +52,8 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isScrolled
-                    ? 'text-slate-600 hover:text-brand-700 hover:bg-white shadow-none hover:shadow-sm'
-                    : 'text-slate-200 hover:text-white hover:bg-white/10'
+                  ? 'text-slate-600 hover:text-brand-700 hover:bg-white shadow-none hover:shadow-sm'
+                  : 'text-slate-200 hover:text-white hover:bg-white/10'
                   }`}
               >
                 {link.name}
@@ -60,8 +64,8 @@ const Navbar: React.FC = () => {
           <a
             href="#contact"
             className={`group relative flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm transition-all overflow-hidden ${isScrolled
-                ? 'bg-slate-900 text-white hover:bg-slate-800 hover:shadow-lg'
-                : 'bg-white text-brand-900 hover:bg-brand-50'
+              ? 'bg-slate-900 text-white hover:bg-slate-800 hover:shadow-lg'
+              : 'bg-white text-brand-900 hover:bg-brand-50'
               }`}
           >
             <span className="relative z-10 flex items-center gap-2">

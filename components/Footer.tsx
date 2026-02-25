@@ -15,7 +15,13 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-white text-xl leading-none">{metrics.company.name}</span>
-                <span className="text-[10px] text-brand-500 font-bold uppercase tracking-widest">{metrics.company.suffix}</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest">
+                  {metrics.company.suffix.split(' ').map((word, index, arr) => (
+                    <span key={index} className={word.toLowerCase() === 'energy' ? 'text-yellow-500' : 'text-brand-500'}>
+                      {word}{index < arr.length - 1 ? ' ' : ''}
+                    </span>
+                  ))}
+                </span>
               </div>
             </div>
             <p className="text-sm leading-7 mb-8 text-slate-400">
