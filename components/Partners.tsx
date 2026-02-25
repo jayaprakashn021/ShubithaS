@@ -29,13 +29,17 @@ const Partners: React.FC = () => {
                     </h3>
                     <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                         {metrics.partners.approvals.map((approval, idx) => (
-                            <div key={idx} className="group relative grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 transform hover:scale-105">
+                            <div key={idx} className="group relative grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 transform hover:scale-105 flex flex-col items-center">
                                 <img
                                     src={approval.logo}
                                     alt={approval.name}
                                     className="h-16 md:h-20 object-contain drop-shadow-sm"
-                                    title={approval.name}
                                 />
+                                {/* Hover Detail Tooltip */}
+                                <div className="absolute top-full mt-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 w-48 bg-slate-900 border border-slate-700 text-white text-xs font-medium text-center p-2.5 rounded-xl shadow-2xl">
+                                    {approval.detail || approval.name}
+                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-slate-900"></div>
+                                </div>
                             </div>
                         ))}
                     </div>

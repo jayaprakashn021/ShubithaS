@@ -156,10 +156,10 @@ const metrics = {
   ],
   partners: {
     approvals: [
-      { name: "MNRE Govt of India", logo: "./gallery/mnre.svg" },
-      { name: "TGREDCO", logo: "./gallery/tgredco.svg" },
-      { name: "TGNPDCL", logo: "./gallery/tgnpdcl.svg" },
-      { name: "TGSPDCL", logo: "./gallery/tgspdcl.svg" }
+      { name: "MNRE Govt of India", logo: "./logos/MNRE_India.svg", detail: "Ministry of New and Renewable Energy – Government of India" },
+      { name: "TGREDCO", logo: "./gallery/tgredco.svg", detail: "Telangana State Renewable Energy Development Corporation" },
+      { name: "TGNPDCL", logo: "./gallery/tgnpdcl.svg", detail: "Northern Power Distribution Company of Telangana" },
+      { name: "TGSPDCL", logo: "./logos/tgspdcl.png", detail: "Southern Power Distribution Company of Telangana Limited" }
     ],
     customers: [
       "Power Grid Corporation of India Warangal",
