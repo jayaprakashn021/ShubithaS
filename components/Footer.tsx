@@ -7,11 +7,11 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-950 text-slate-400 py-20 border-t border-slate-900 font-sans">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 lg:gap-20 mb-16">
-          
+
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-3 mb-8">
-              <div className="bg-brand-600 p-2 rounded-lg">
-                <Sun className="text-white w-6 h-6 fill-white" />
+              <div className="bg-brand-50 p-2 rounded-lg">
+                <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Shubhitha's Energy Solutions Logo" className="h-10 w-auto" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-white text-xl leading-none">{metrics.company.name}</span>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold mb-8 text-lg">Our Services</h4>
             <ul className="space-y-4 text-sm">
               {metrics.services.slice(0, 5).map((service, index) => (
-                 <li key={index}><FooterLink href="#services">{service.title}</FooterLink></li>
+                <li key={index}><FooterLink href="#services">{service.title}</FooterLink></li>
               ))}
             </ul>
           </div>
