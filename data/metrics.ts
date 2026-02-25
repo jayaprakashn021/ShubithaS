@@ -2,7 +2,7 @@ const metrics = {
   company: {
     name: "Shubhitha S",
     suffix: "Energy Solutions",
-    phone: "+91 85558 34486",
+    phone: "+91 85558 34486 / +91 90005 01069",
     email: "shubhithasenergysolutions@gmail.com",
     address: {
       line1: "H. No: 2-57/10, Arepally, Geesugonda,",
