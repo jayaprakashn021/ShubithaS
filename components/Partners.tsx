@@ -76,24 +76,56 @@ const Partners: React.FC = () => {
                         </div>
 
                         <div className="mb-10">
-                            <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Solar Modules</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {metrics.partners.suppliers.modules.map((module, idx) => (
-                                    <span key={idx} className="px-4 py-2 bg-white text-slate-700 font-semibold rounded-lg shadow-sm border border-slate-100 hover:border-brand-300 hover:text-brand-600 transition-colors cursor-default">
-                                        {module}
-                                    </span>
-                                ))}
+                            <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-6 border-b border-slate-200 pb-2">Solar Modules</h4>
+                            <div className="flex flex-wrap items-center gap-4 md:gap-6">
+                                {metrics.partners.suppliers.modules.map((module, idx) => {
+                                    const isVikram = module.name.toLowerCase() === 'vikram';
+                                    return (
+                                        <div key={idx} className="flex flex-col items-center gap-2 group cursor-default">
+                                            <div className="w-24 h-16 md:w-32 md:h-20 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center p-3 hover:border-brand-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative">
+                                                <img
+                                                    src={module.logo}
+                                                    alt={module.name}
+                                                    className={`max-h-full max-w-full object-contain transition-all duration-300 ${isVikram
+                                                        ? 'opacity-100'
+                                                        : 'opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0'
+                                                        }`}
+                                                    title={module.name}
+                                                />
+                                            </div>
+                                            <span className="text-xs font-semibold text-slate-600 tracking-wide text-center uppercase group-hover:text-brand-600 transition-colors">
+                                                {module.name}
+                                            </span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 
                         <div>
-                            <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">Inverter Brands</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {metrics.partners.suppliers.inverters.map((inverter, idx) => (
-                                    <span key={idx} className="px-4 py-2 bg-white text-slate-700 font-semibold rounded-lg shadow-sm border border-slate-100 hover:border-amber-300 hover:text-amber-600 transition-colors cursor-default">
-                                        {inverter}
-                                    </span>
-                                ))}
+                            <h4 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-6 border-b border-slate-200 pb-2">Inverter Brands</h4>
+                            <div className="flex flex-wrap items-center gap-4 md:gap-6">
+                                {metrics.partners.suppliers.inverters.map((inverter, idx) => {
+                                    const isVikram = inverter.name.toLowerCase() === 'vikram';
+                                    return (
+                                        <div key={idx} className="flex flex-col items-center gap-2 group cursor-default">
+                                            <div className="w-24 h-16 md:w-32 md:h-20 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center p-3 hover:border-amber-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative">
+                                                <img
+                                                    src={inverter.logo}
+                                                    alt={inverter.name}
+                                                    className={`max-h-full max-w-full object-contain transition-all duration-300 ${isVikram
+                                                        ? 'opacity-100'
+                                                        : 'opacity-70 group-hover:opacity-100 grayscale group-hover:grayscale-0'
+                                                        }`}
+                                                    title={inverter.name}
+                                                />
+                                            </div>
+                                            <span className="text-xs font-semibold text-slate-600 tracking-wide text-center uppercase group-hover:text-amber-600 transition-colors">
+                                                {inverter.name}
+                                            </span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
 

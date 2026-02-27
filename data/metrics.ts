@@ -157,13 +157,13 @@ const metrics = {
   partners: {
     approvals: [
       { name: "MNRE Govt of India", logo: "./logos/MNRE_India.svg", detail: "Ministry of New and Renewable Energy – Government of India" },
-      { name: "TGREDCO", logo: "./gallery/tgredco.svg", detail: "Telangana State Renewable Energy Development Corporation" },
-      { name: "TGNPDCL", logo: "./gallery/tgnpdcl.svg", detail: "Northern Power Distribution Company of Telangana" },
+      { name: "TGREDCO", logo: "./logos/KUSUMScheme.png", detail: "Telangana State Renewable Energy Development Corporation" },
+      { name: "TGNPDCL", logo: "./logos/npdcl.png", detail: "Northern Power Distribution Company of Telangana" },
       { name: "TGSPDCL", logo: "./logos/tgspdcl.png", detail: "Southern Power Distribution Company of Telangana Limited" }
     ],
     customers: [
-      "Power Grid Corporation of India Warangal",
-      "Karnataka",
+      "Power Grid Corporation of India-Warangal",
+      "Power Grid Corporation of India-Karnataka",
       "Shubam Oil",
       "Rice Mills",
       "Cotton Jinning Mills",
@@ -171,10 +171,21 @@ const metrics = {
     ],
     suppliers: {
       modules: [
-        "Renewsys", "Waaree", "Adani", "Vikram", "Novasys", "Premier", "EMV", "Satwik"
+        { name: "Renewsys", logo: "./logos/renewsys.png" },
+        { name: "Waaree", logo: "./logos/waaree.png" },
+        { name: "Adani", logo: "./logos/adani.png" },
+        { name: "Vikram", logo: "./logos/vikram2.png" },
+        { name: "Novasys", logo: "./logos/novasys.png" },
+        { name: "Premier", logo: "./logos/premier.png" },
+        { name: "Emmvee", logo: "./logos/emmvee.png" },
+        { name: "Saatvik", logo: "./logos/saatvik.png" }
       ],
       inverters: [
-        "Polycab", "Waaree", "Growatt", "Solis", "Sungrow"
+        { name: "Polycab", logo: "./logos/polycab.png" },
+        { name: "Waaree", logo: "./logos/waaree.png" },
+        { name: "Growatt", logo: "./logos/growatt.png" },
+        { name: "Solis", logo: "./logos/solis.png" },
+        { name: "Sungrow", logo: "./logos/sungrow.png" }
       ]
     }
   }
